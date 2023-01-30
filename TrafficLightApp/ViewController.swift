@@ -20,24 +20,23 @@ class ViewController: UIViewController {
     
     private let lightOn: CGFloat = 1
     private let lightOff: CGFloat = 0.3
-    
+        
     private enum CurrentLight {
         case none, red, yellow, green
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+ 
+    override func viewDidAppear(_ animated: Bool) {
         redLightView.layer.cornerRadius = redLightView.frame.width / 2
         yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
         greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
     }
     
-    
-    
-    @IBAction func startButtonTapped() {
-        startButton.setTitle("Next", for: .normal)
-        
+        @IBAction func startButtonTapped() {
+            
         switch currentLight {
         case .red:
             redLightView.alpha = lightOff
@@ -52,6 +51,7 @@ class ViewController: UIViewController {
             redLightView.alpha = lightOn
             currentLight = .red
         default:
+            startButton.setTitle("Next", for: .normal)
             redLightView.alpha = lightOn
             currentLight = .red
         }

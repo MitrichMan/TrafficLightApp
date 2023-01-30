@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,53 +13,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLightApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rob-sy-nXl">
-                                <rect key="frame" x="157" y="89" width="100" height="378"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rob-sy-nXl">
+                                <rect key="frame" x="119.5" y="45" width="136" height="488.5"/>
                                 <subviews>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QL7-lD-ppY">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="136"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QL7-lD-ppY" secondAttribute="height" multiplier="1:1" id="NFQ-TG-fJH"/>
+                                        </constraints>
                                     </view>
                                     <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e91-ye-xKu">
-                                        <rect key="frame" x="0.0" y="140" width="100" height="98"/>
+                                        <rect key="frame" x="0.0" y="176" width="136" height="136.5"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="e91-ye-xKu" secondAttribute="height" multiplier="1:1" id="DmU-Yr-KQ6"/>
+                                        </constraints>
                                     </view>
                                     <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Om-Nu-2yL">
-                                        <rect key="frame" x="0.0" y="278" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="352.5" width="136" height="136"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9Om-Nu-2yL" secondAttribute="height" multiplier="1:1" id="dFa-LA-4Cg"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="378" id="6WD-gD-HVM"/>
-                                    <constraint firstItem="e91-ye-xKu" firstAttribute="centerY" secondItem="rob-sy-nXl" secondAttribute="centerY" id="QhB-vN-q3u"/>
-                                    <constraint firstItem="e91-ye-xKu" firstAttribute="top" secondItem="rob-sy-nXl" secondAttribute="top" constant="140" id="pOL-9h-Hmx"/>
-                                    <constraint firstAttribute="width" constant="100" id="x8i-5l-Hpe"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFO-rF-25O">
-                                <rect key="frame" x="134" y="744" width="146" height="38"/>
+                                <rect key="frame" x="116" y="572.5" width="143" height="34.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="RCf-c4-ADl"/>
-                                    <constraint firstAttribute="height" constant="38" id="hnC-ZD-YGy"/>
+                                    <constraint firstAttribute="width" secondItem="SFO-rF-25O" secondAttribute="height" multiplier="79:19" id="P1r-vx-qJh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start">
@@ -71,21 +58,32 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdA-jM-Ybs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rob-sy-nXl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="1ui-1a-8ca"/>
-                            <constraint firstItem="rob-sy-nXl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="84T-yF-Y9F"/>
-                            <constraint firstItem="SFO-rF-25O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IJp-zo-WQg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SFO-rF-25O" secondAttribute="bottom" constant="80" id="mMZ-lp-oJe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SFO-rF-25O" secondAttribute="bottom" constant="60" id="0HA-Vc-iEH"/>
+                            <constraint firstItem="rob-sy-nXl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNw-kH-zsP"/>
+                            <constraint firstItem="rob-sy-nXl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="jkZ-qU-XTf"/>
+                            <constraint firstItem="SFO-rF-25O" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="79:368" id="oHu-Bc-RVs"/>
+                            <constraint firstItem="SFO-rF-25O" firstAttribute="top" secondItem="rob-sy-nXl" secondAttribute="bottom" constant="39" id="ow9-Jk-E6G"/>
+                            <constraint firstItem="SFO-rF-25O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ruu-Is-fXu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="9Om-Nu-2yL" id="k45-LE-2Bt"/>
+                        <outlet property="redLightView" destination="QL7-lD-ppY" id="85e-ar-CtG"/>
+                        <outlet property="startButton" destination="SFO-rF-25O" id="vDk-qg-b4H"/>
+                        <outlet property="yellowLightView" destination="e91-ye-xKu" id="cOH-Te-Eat"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-90" y="3.1690140845070425"/>
+            <point key="canvasLocation" x="-194.20289855072465" y="7.3369565217391308"/>
         </scene>
     </scenes>
     <resources>
